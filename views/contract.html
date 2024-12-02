@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+
+<BODY LANG="en-CA" LINK="#0563c1" DIR="LTR" style="font-size:14px !important;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+    <% if(data  && Object.keys(data).length >0 ){ %>
+        <div id="pageHeader">
+            <P ALIGN=CENTER STYLE="margin-bottom: 0in;"><IMG SRC='/views/om_logo.png' NAME="Content Placeholder 8" ALIGN=CENTER WIDTH=200 HEIGHT=50 BORDER=0></P>
+            <!-- <P ALIGN=CENTER><FONT COLOR="#009161"><I><B>Eliminate the Gap</B></I></FONT></P> -->
+        </div>
+        <div id="pageFooter" style="text-align: center; ">Page {{page}} of {{pages}}</div>
+        <p style="text-align: center; "><b>GOLF COURSE AGREEMENT</b></p>
+        <p></p>
+        <p>This binding Golf Course Agreement is made as of <%- data.date %> between:</p>
+        <p></p>
+        <p><span style="white-space:pre">	</span><b>COURSE, <%- data.courseName %> </b> located at</p>
+        <p><span style="white-space:pre">         </span><%- data.address%>, <%- data.city%>, <%- data.state%></p>
+        <p style="text-align: right; ">(“the <b>Course</b>”)</p>
+        <p></p>
+        <p>AND</p>
+        <p></p> 
+        <p><span style="white-space:pre">	</span><b>Option Matrix InfoTech</b>, located at</p>
+        <p><span style="white-space:pre">	</span>   Uptown Cyberabad Building, B block, 4th floor, 100 Feet Rd</p>
+        <p><span style="white-space:pre">	</span>   Ayyappa Society, Madhapur, Hyderabad, Telangana 500081</p>
+        <p style="text-align: right; ">(the “<b>Company</b>”)</p>
+        <p></p>
+        <p>for use of the application and oFo Platform.</p>
+        <p></p>
+        <%- data.terms%>
+        
+        <div style="page-break-before:always"></div> 
+        <p>IN WITNESS WHERE OF this Agreement has been duly executed by the parties hereto.</p>
+        <p></p>
+        <p style="text-align: right; "><b><%- data.courseName %></b></p>
+        <p style="text-align: right; ">                                                                                  By authorized signatory</p>
+        <p style="text-align: right; "><div style="height: 50px; width: 178px"></div></p>
+        <p style="text-align: right; ">_________________</p>
+        
+            <p style="text-align: right; ">Signature</p>
+        
+        
+            <p style="text-align: right; "><%- data.contactName %></p>
+       
+        <p style="text-align: right; ">_________________</p>
+       
+            <p style="text-align: right; ">Print Name</p>
+        
+        
+            <p style="text-align: right; "><%- data.city%>, <%- data.state%></p>
+        
+        <p style="text-align: right; ">_________________</p>
+        
+            <p style="text-align: right; ">City and Province</p>
+        
+        <p style="text-align: right; "></p>
+        <p><b>Option Matrix InfoTech</b></p>
+        <p>By authorized signatory</p>
+        <p><IMG SRC='/views/om_logo.png' WIDTH=160 HEIGHT=50 BORDER=0></p>
+        _________________
+        <p>Navin Malik</p>
+        _________________
+        <p>Date: <%- data.date%></p>
+    <% } %>
+</BODY>
+</html>

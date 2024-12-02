@@ -1,0 +1,67 @@
+{
+  "name": "sales-global-backend",
+  "version": "1.0.0",
+  "description": "sales global api's in node & mysql",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/optionmatrix2002/918-backend-sg.git"
+  },
+  "keywords": [
+    "sales",
+    "global",
+    "sales",
+    "global",
+    "nodejs"
+  ],
+  "author": "lakshman-om",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/optionmatrix2002/sales-global-backend/issues"
+  },
+  "homepage": "https://github.com/optionmatrix2002/sales-global-backend#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.5",
+    "cron": "^1.7.1",
+    "crypto": "^1.0.1",
+    "docusign-esign": "^5.0.2",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "fcm-node": "^1.5.1",
+    "frameguard": "^3.0.0",
+    "helmet": "^3.15.0",
+    "html-pdf": "^2.2.0",
+    "log": "^3.2.0",
+    "method-override": "^3.0.0",
+    "moment": "^2.23.0",
+    "mongodb": "^2.2.33",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "mysql2": "^1.6.4",
+    "nodemailer": "^5.1.1",
+    "nodemon": "^2.0.15",
+    "onesignal-node": "^2.1.0",
+    "path": "^0.12.7",
+    "pdfjs-dist": "^2.1.266",
+    "request-promise": "^4.2.4",
+    "sequelize": "^4.42.0",
+    "stripe": "^7.1.0",
+    "twilio": "^3.31.0",
+    "underscore": "^1.9.1",
+    "validator": "^10.10.0",
+    "winston": "^3.1.0",
+    "winston-daily-rotate-file": "^3.5.1"
+  }
+}

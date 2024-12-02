@@ -1,0 +1,591 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<BODY LANG="en-CA" LINK="#0563c1" DIR="LTR">
+    <% if(data  && Object.keys(data).length >0 ){ %>
+        <DIV TYPE=HEADER>
+            <P ALIGN=CENTER STYLE="margin-bottom: 0in; line-height: 20%">
+                <IMG SRC="../views/om_logo.png" NAME="Content Placeholder 8" ALIGN=BOTTOM WIDTH=178 HEIGHT=39 BORDER=0>
+            </P>
+            <P ALIGN=CENTER STYLE="">
+                <FONT COLOR="#009161">
+                    <I><B>Eliminate
+        the Gap</B></I>
+                </FONT>
+            </P>
+        </DIV>
+        <P ALIGN=CENTER STYLE="margin-bottom: 0in; line-height: 20%">
+            Option Matrix InfoTech.</P>
+        <P ALIGN=CENTER STYLE="margin-bottom: 0in; line-height: 20%">Uptown Cyberabad Building, 100 Feet Road</P>
+        <P ALIGN=CENTER STYLE="margin-bottom: 0in; line-height: 20%">Silicon Valley, Madhapur, Hyderabad</P>
+        <P ALIGN=CENTER STYLE="margin-bottom: 0in; line-height: 20%">
+        </P>
+        <P ALIGN=CENTER STYLE="margin-bottom: 0in; line-height: 20%">
+            <A HREF="mailto:contact@optionmatrix.com">contact@optionmatrix.com</A>
+        </P>
+        <P STYLE="margin-bottom: 0in; line-height: 20%">
+        </P>
+        <P ALIGN=LEFT STYLE="margin-bottom: 0in; margin-left: 300px; line-height: 20%"><b>Date: </b>
+            <%- data.date %>
+        </P>
+        <P ALIGN=LEFT STYLE="margin-bottom: 0in; margin-left: 300px; line-height: 20%"><b>Course: </b>
+            <%- data.courseName %>
+        </P>
+        <P STYLE="margin-bottom: 0in; line-height: 20%">
+        </P>
+        <P ALIGN=CENTER STYLE="margin-bottom: 0in; line-height: 115%">
+            <FONT SIZE=5>
+                <B>DAILY
+    SALES REPORT</B>
+            </FONT>
+        </P>
+        <P STYLE="margin-bottom: 0in; line-height: 20%">
+            <BR>
+        </P>
+        <P ALIGN=CENTER STYLE="margin-bottom: 0in; line-height: 20%">
+            <U><B>SALES</B></U>
+        </P>
+        <P STYLE="margin-bottom: 0in; line-height: 20%">
+            <BR>
+        </P>
+        <TABLE ALIGN=CENTER WIDTH=1000 CELLPADDING=7 CELLSPACING=0>
+            <COL WIDTH=108>
+            <COL WIDTH=213>
+            <COL WIDTH=128>
+            <COL WIDTH=118>
+            <TBODY>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=108 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>
+                            <B>Number of Items</B>
+                        </P>
+                    </TD>
+                    <TD WIDTH=213 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>
+                            <B>Description</B>
+                        </P>
+                    </TD>
+                    <TD WIDTH=128 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>
+                            <B>Cost per Item</B>
+                        </P>
+                    </TD>
+                    <TD WIDTH=118 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>
+                            <B>Total Sales</B>
+                        </P>
+                    </TD>
+                    <!-- <TD WIDTH=118 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                    <P ALIGN=CENTER><B>Total Sales With Tax</B></P>
+                </TD> -->
+                </TR>
+            </TBODY>
+            <% Object.keys(data.items).forEach(function(prop) { %>
+                <TBODY>
+                    <TR VALIGN=TOP>
+                        <TD WIDTH=108 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                            <P ALIGN=CENTER>
+                                <%- data.items[prop].quantity %>
+                            </P>
+                        </TD>
+                        <TD WIDTH=213 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                            <P>
+                                <%- prop %>
+                            </P>
+                        </TD>
+                        <TD WIDTH=128 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                            <P ALIGN=RIGHT>$
+                                <%- data.items[prop].itemPrice %>
+                            </P>
+                        </TD>
+                        <TD WIDTH=118 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                            <P ALIGN=RIGHT>$
+                                <%- data.items[prop].totalSale %>
+                            </P>
+                        </TD>
+                        <!-- <TD WIDTH=118 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                    <P ALIGN=RIGHT>$ <%- data.items[prop].totalSaleWithTax %></P>
+                </TD> -->
+                    </TR>
+                </TBODY>
+                <% }); %>
+                    <TBODY>
+                        <TR VALIGN=TOP>
+                            <TD WIDTH=108 STYLE="border-top: 1px solid #00000a; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+                                <P ALIGN=CENTER>
+                                    <BR>
+                                </P>
+                            </TD>
+                            <TD WIDTH=213 STYLE="border-top: 1px solid #00000a; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+                                <P>
+                                    <BR>
+                                </P>
+                            </TD>
+                            <TD WIDTH=128 STYLE="border-top: 1px solid #00000a; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+                                <P ALIGN=RIGHT>
+                                    <BR>
+                                </P>
+                            </TD>
+                            <TD WIDTH=118 STYLE="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: none; border-right: none; padding: 0in">
+                                <P ALIGN=RIGHT>
+                                    <BR>
+                                </P>
+                            </TD>
+                        </TR>
+                        <TR VALIGN=middle>
+                            <TD WIDTH=108 STYLE="border: none; padding: 0px">
+                                <P ALIGN=CENTER>
+                                    <BR>
+                                </P>
+                            </TD>
+                            <TD WIDTH=213 STYLE="border: none; padding: 0px">
+                                <P>
+                                    <BR>
+                                </P>
+                            </TD>
+                            <TD WIDTH=150 STYLE="border: none; padding: 0px">
+                                <P ALIGN=RIGHT>SALES</P>
+                            </TD>
+                            <TD WIDTH=118 STYLE="border-top: 1px solid #00000a; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+                                <P ALIGN=RIGHT>$
+                                    <%- data.totalSalesWithoutTax %>
+                                </P>
+                            </TD>
+                        </TR>
+                        <TR VALIGN=TOP>
+                            <TD WIDTH=108 STYLE="border: none; padding: 0in">
+                                <P ALIGN=CENTER>
+                                </P>
+                            </TD>
+                            <TD WIDTH=213 STYLE="border: none; padding: 0in">
+                                <P>
+                                </P>
+                            </TD>
+                            <TD WIDTH=128 STYLE="border: none; padding:0in">
+                                <P ALIGN=RIGHT>GRATUITIES</P>
+                            </TD>
+                            <TD WIDTH=118 STYLE="border-top: none; border-bottom: 1px solid #00000a; border-left: none; border-right: none; padding: 0in">
+                                <P ALIGN=RIGHT>$
+                                    <%- data.tip %>
+                                </P>
+                            </TD>
+                        </TR>
+                        <TR VALIGN=TOP>
+                            <TD WIDTH=108 STYLE="border: none; padding: 0in">
+                                <P ALIGN=CENTER>
+                                    <BR>
+                                </P>
+                            </TD>
+                            <TD WIDTH=213 STYLE="border: none; padding: 0px">
+                                <P>
+                                    <BR>
+                                </P>
+                            </TD>
+                            <TD WIDTH=128 STYLE="border: none; padding: 10px">
+                                <P ALIGN=RIGHT>
+                                    <B>TOTAL SALES</B>
+                                </P>
+                            </TD>
+                            <TD WIDTH=118 STYLE="border-top: 1px solid #00000a; border-bottom: none; border-left: none; border-right: none; padding: 10px">
+                                <P ALIGN=RIGHT>
+                                    <B>$ <%- data.totalSalesWithTips %></B>
+                                </P>
+                            </TD>
+                        </TR>
+                    </TBODY>
+        </TABLE>
+        <BR>
+        <BR>
+        <P STYLE="margin-bottom: 0in; line-height: 20%">
+        </P>
+        <P ALIGN=CENTER STYLE="margin-bottom: 0in; line-height: 20%">
+            <U><B>TAXES</B></U>
+        </P>
+        <P STYLE="margin-bottom: 0in; line-height: 20%">
+            <BR>
+        </P>
+        <TABLE ALIGN=CENTER WIDTH=1000 CELLPADDING=7 CELLSPACING=0>
+            <COL WIDTH=108>
+            <COL WIDTH=213>
+            <COL WIDTH=128>
+            <COL WIDTH=118>
+            <TBODY>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=108 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>
+                            <B>Tax</B>
+                        </P>
+                    </TD>
+                    <TD WIDTH=213 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>
+                            <B>Amount Taxable</B>
+                        </P>
+                    </TD>
+                    <TD WIDTH=128 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>
+                            <B>Rate</B>
+                        </P>
+                    </TD>
+                    <TD WIDTH=118 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>
+                            <B>Total Tax</B>
+                        </P>
+                    </TD>
+                </TR>
+            </TBODY>
+            <TBODY>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=108 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>GST</P>
+                    </TD>
+                    <TD WIDTH=213 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=RIGHT>$
+                            <%- data.totalSalesWithoutTax %>
+                        </P>
+                    </TD>
+                    <TD WIDTH=128 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>
+                            <%- data.GST %> %</P>
+                    </TD>
+                    <TD WIDTH=118 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=RIGHT>$
+                            <%- data.taxGST %>
+                        </P>
+                    </TD>
+                </TR>
+            </TBODY>
+            <TBODY>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=108 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>PST</P>
+                    </TD>
+                    <TD WIDTH=213 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=RIGHT>$
+                            <%- data.totalSalesWithoutTax %>
+                        </P>
+                    </TD>
+                    <TD WIDTH=128 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>
+                            <%- data.PST %> %</P>
+                    </TD>
+                    <TD WIDTH=118 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=RIGHT>$
+                            <%- data.taxPST %>
+                        </P>
+                    </TD>
+                </TR>
+            </TBODY>
+            <TBODY>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=108 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>HST</P>
+                    </TD>
+                    <TD WIDTH=213 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=RIGHT>$
+                            <%- data.totalSalesWithoutTax %>
+                        </P>
+                    </TD>
+                    <TD WIDTH=128 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>
+                            <%- data.HST %> %</P>
+                    </TD>
+                    <TD WIDTH=118 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=RIGHT>$
+                            <%- data.taxPST %>
+                        </P>
+                    </TD>
+                </TR>
+            </TBODY>
+            <TBODY>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=108 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>PST</P>
+                    </TD>
+                    <TD WIDTH=213 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=RIGHT>$
+                            <%- data.totalSalesWithoutTax %>
+                        </P>
+                    </TD>
+                    <TD WIDTH=128 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>
+                            <%- data.Liquor %> %</P>
+                    </TD>
+                    <TD WIDTH=118 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=RIGHT>$
+                            <%- data.taxPST %>
+                        </P>
+                    </TD>
+                </TR>
+            </TBODY>
+            <!-- <TBODY>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=108 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>LIQUOR TAX</P>
+                    </TD>
+                    <TD WIDTH=213 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=RIGHT>110.00</P>
+                    </TD>
+                    <TD WIDTH=128 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>10.0 %</P>
+                    </TD>
+                    <TD WIDTH=118 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=RIGHT>11.00</P>
+                    </TD>
+                </TR>
+            </TBODY> -->
+            <TBODY>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=108 STYLE="border-top: 1px solid #00000a; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+                        <P ALIGN=CENTER>
+                            <BR>
+                        </P>
+                    </TD>
+                    <TD WIDTH=213 STYLE="border-top: 1px solid #00000a; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+                        <P>
+                            <BR>
+                        </P>
+                    </TD>
+                    <TD WIDTH=128 STYLE="border-top: 1px solid #00000a; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+                        <P ALIGN=RIGHT>
+                            <BR>
+                        </P>
+                    </TD>
+                    <TD WIDTH=118 STYLE="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: none; border-right: none; padding: 0in">
+                        <P ALIGN=RIGHT>
+                            <BR>
+                        </P>
+                    </TD>
+                </TR>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=108 STYLE="border: none; padding: 0in">
+                        <P ALIGN=CENTER>
+                            <BR>
+                        </P>
+                    </TD>
+                    <TD WIDTH=213 STYLE="border: none; padding: 0in">
+                        <P>
+                        </P>
+                    </TD>
+                    <TD WIDTH=128 STYLE="border: none; padding: 10px">
+                        <P ALIGN=RIGHT>
+                            <B>TOTAL TAXES</B>
+                        </P>
+                    </TD>
+                    <TD WIDTH=118 STYLE="border-top: 1px solid #00000a; border-bottom: none; border-left: none; border-right: none; padding: 10px">
+                        <P ALIGN=RIGHT>
+                            <B>$ <%- data.totalTax %></B>
+                        </P>
+                    </TD>
+                </TR>
+            </TBODY>
+        </TABLE>
+        <P ALIGN=CENTER STYLE="margin-bottom: 0in; line-height: 20%">
+            <U><B>FEES</B></U>
+        </P>
+        <P STYLE="margin-bottom: 0in; line-height: 20%">
+            <BR>
+        </P>
+        <TABLE ALIGN=CENTER WIDTH=1000 CELLPADDING=7 CELLSPACING=0>
+            <COL WIDTH=108>
+            <COL WIDTH=213>
+            <COL WIDTH=128>
+            <COL WIDTH=118>
+            <TBODY>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=108 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>
+                            <B>Tax</B>
+                        </P>
+                    </TD>
+                    <TD WIDTH=213 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>
+                            <B>Amount Subject to Fee</B>
+                        </P>
+                    </TD>
+                    <TD WIDTH=128 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>
+                            <B>Rate</B>
+                        </P>
+                    </TD>
+                    <TD WIDTH=118 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>
+                            <B>Total Tax</B>
+                        </P>
+                    </TD>
+                </TR>
+            </TBODY>
+            <TBODY>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=108 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>CREDIT CARD FEE</P>
+                    </TD>
+                    <TD WIDTH=213 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=RIGHT>$
+                            <%- data.amountSubjectToFee %>
+                        </P>
+                    </TD>
+                    <TD WIDTH=128 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>3.0 %</P>
+                    </TD>
+                    <TD WIDTH=118 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=RIGHT>$
+                            <%- data.creditFee %>
+                        </P>
+                    </TD>
+                </TR>
+            </TBODY>
+            <TBODY>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=108 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>SERVICE FEE</P>
+                    </TD>
+                    <TD WIDTH=213 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=RIGHT>$
+                            <%- data.amountSubjectToFee %>
+                        </P>
+                    </TD>
+                    <TD WIDTH=128 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=CENTER>4.0 %</P>
+                    </TD>
+                    <TD WIDTH=118 STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                        <P ALIGN=RIGHT>$
+                            <%- data.serviceFee %>
+                        </P>
+                    </TD>
+                </TR>
+            </TBODY>
+            <TBODY>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=108 STYLE="border-top: 1px solid #00000a; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+                        <P ALIGN=CENTER>
+                            <BR>
+                        </P>
+                    </TD>
+                    <TD WIDTH=213 STYLE="border-top: 1px solid #00000a; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+                        <P>
+                            <BR>
+                        </P>
+                    </TD>
+                    <TD WIDTH=128 STYLE="border-top: 1px solid #00000a; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+                        <P ALIGN=RIGHT>
+                            <BR>
+                        </P>
+                    </TD>
+                    <TD WIDTH=118 STYLE="border-top: 1px solid #00000a; border-bottom: 1px solid #00000a; border-left: none; border-right: none; padding: 0in">
+                        <P ALIGN=RIGHT>
+                            <BR>
+                        </P>
+                    </TD>
+                </TR>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=108 STYLE="border: none; padding: 0in">
+                        <P ALIGN=CENTER>
+                            <BR>
+                        </P>
+                    </TD>
+                    <TD WIDTH=213 STYLE="border: none; padding: 0in">
+                        <P>
+                        </P>
+                    </TD>
+                    <TD WIDTH=128 STYLE="border: none; padding: 10px">
+                        <P ALIGN=RIGHT>
+                            <B>TOTAL FEES</B>
+                        </P>
+                    </TD>
+                    <TD WIDTH=118 STYLE="border-top: 1px solid #00000a; border-bottom: none; border-left: none; border-right: none; padding: 10px">
+                        <P ALIGN=RIGHT>
+                            <B>$ <%- data.totalFees %></B>
+                        </P>
+                    </TD>
+                </TR>
+            </TBODY>
+        </TABLE>
+        <DIV ALIGN=CENTER>
+            <P STYLE="margin-bottom: 0in; line-height: 0%">
+            </P>
+            <P STYLE="margin-bottom: 0.11in">
+                <A NAME="_GoBack"></A>
+            </P>
+            <P STYLE="margin-bottom: 0in; line-height: 0%">
+                <U><B>SUMMARY</B></U>
+            </P>
+            <BR>
+            <P STYLE="margin-bottom: 0in; line-height: 0%">
+            </P>
+            <P STYLE="margin-bottom: 0in; line-height: 0%">
+            </P>
+            <TABLE WIDTH=425 CELLPADDING=7 CELLSPACING=0>
+                <COL WIDTH=298>
+                <COL WIDTH=100>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=298 STYLE="border: none; padding: 0in">
+                        <P>Total Sales</P>
+                    </TD>
+                    <TD WIDTH=100 STYLE="border: none; padding: 0in">
+                        <P ALIGN=RIGHT>
+                            <%- data.totalSalesWithTips %>
+                        </P>
+                    </TD>
+                </TR>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=298 STYLE="border: none; padding: 0in">
+                        <P>Total Taxes</P>
+                    </TD>
+                    <TD WIDTH=100 STYLE="border: none; padding: 0in">
+                        <P ALIGN=RIGHT>
+                            <%- data.totalTax %>
+                        </P>
+                    </TD>
+                </TR>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=298 STYLE="border: none; padding: 0in">
+                        <P>Less Service Fees</P>
+                    </TD>
+                    <TD WIDTH=100 STYLE="border-top: none; border-bottom: 1px solid #00000a; border-left: none; border-right: none; padding: 0in">
+                        <P ALIGN=RIGHT>(
+                            <%- data.totalFees %>)</P>
+                    </TD>
+                </TR>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=298 STYLE="border: none; padding: 0in">
+                        <P>
+                        </P>
+                    </TD>
+                    <TD WIDTH=100 STYLE="border-top: 1px solid #00000a; border-bottom: none; border-left: none; border-right: none; padding: 0in">
+                        <P>
+                        </P>
+                    </TD>
+                </TR>
+                <TR VALIGN=TOP>
+                    <TD WIDTH=298 STYLE="border: none; padding: 0in">
+                        <P>
+                            <B>Total Payment to Course</B>
+                        </P>
+                    </TD>
+                    <TD WIDTH=100 STYLE="border: none; padding: 0in">
+                        <P ALIGN=RIGHT STYLE="margin-bottom: 0in">
+                            <B> $ <%- data.paymentToCourse %></B>
+                        </P>
+                        <P ALIGN=RIGHT>
+                        </P>
+                    </TD>
+                </TR>
+            </TABLE>
+            <P STYLE="margin-bottom: 0in; line-height: 20%">
+            </P>
+            <P STYLE="margin-bottom: 0in; line-height: 20%">
+            </P>
+            <P STYLE="margin-bottom: 0in; line-height: 20%">We thank you for your business - Option Matrix InfoTech.
+            </P>
+            <P STYLE="margin-bottom: 0in; line-height: 20%">
+            </P>
+        </DIV>
+        <% } %>
+</BODY>
+
+</html>
